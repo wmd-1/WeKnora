@@ -172,7 +172,7 @@ services:
 
   # Sandbox 镜像：仅用于 build/pull，非常驻服务；app 执行 Skills 时按需 docker run 该镜像，用毕即释
   sandbox:
-    image: wechatopenai/weknora-sandbox:${WEKNORA_VERSION:-latest}
+    image: weknora-sandbox:latest
     container_name: WeKnora-sandbox
     build:
       context: .

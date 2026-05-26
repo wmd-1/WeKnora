@@ -362,8 +362,8 @@ export const useSettingsStore = defineStore("settings", {
       this.settings.selectedAgentSourceTenantId = (sourceTenantId != null && sourceTenantId !== "") ? sourceTenantId : null;
       // 根据智能体类型自动切换 Agent 模式
       if (agentId === BUILTIN_QUICK_ANSWER_ID) {
-        this.settings.isAgentEnabled = false;
-      } else if (agentId === BUILTIN_SMART_REASONING_ID) {
+        this.settings.isAgentEnabled = true;
+      } else {
         this.settings.isAgentEnabled = true;
       }
       // 自定义智能体需要根据其配置来决定

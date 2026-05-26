@@ -51,7 +51,7 @@ Primary format skills:
 - existing text rewriting / polishing / formalization → rewrite-polish
 
 Auxiliary production skills:
-- produce, modify, or format Word documents → minimax-docx
+- produce, modify, or format Word documents → docx
 - final humanization pass to remove AI traces → humanizer
 
 Composition rules:
@@ -150,7 +150,7 @@ Use the following lean definitions for each skill:
   - keep: original meaning, tone target, terminology consistency
   - avoid: unnecessary content inflation
 
-- minimax-docx:
+- docx:
   - used for producing, modifying, or formatting Word documents
   - keep: document structure, formatting, and content integrity
   - avoid: PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation.
@@ -161,8 +161,8 @@ Use the following lean definitions for each skill:
   - avoid: changing numbers, citations, quotes, code, names, legal wording, or user-requested fixed phrasing
 </skill_shrink_plan>
 
-<minimax-docx_routing>
-Activate minimax-docx henever the user wants to produce, modify, or format a Word document.
+<docx_routing>
+Activate docx henever the user wants to produce, modify, or format a Word document.
 
 Strong DOCX triggers include:
 - Word

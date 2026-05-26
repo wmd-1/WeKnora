@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     ca-certificates \
     gnupg \
+    python3-pip \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 # ------------------------------------------------
@@ -110,13 +111,15 @@ RUN mkdir -p /usr/local/share/mermaid && \
 # ------------------------------------------------
 # Install Python packages
 # ------------------------------------------------
-RUN pip install --no-cache-dir \
+
+RUN /usr/bin/python3 -m pip install --no-cache-dir --break-system-packages \
     diagrams \
     matplotlib \
     seaborn \
     plotly \
     networkx \
-    pillow
+    pillow \
+    defusedxml
 
 # ------------------------------------------------
 # Environment variables for OpenXML

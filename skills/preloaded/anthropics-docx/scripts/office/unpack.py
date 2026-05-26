@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 """Unpack Office files (DOCX, PPTX, XLSX) for editing.
 
 Extracts the ZIP archive, pretty-prints XML files, and optionally:
@@ -17,6 +18,10 @@ import argparse
 import sys
 import zipfile
 from pathlib import Path
+
+import sys
+print("PYTHON PATH:", sys.executable)  # 打印真实Python路径
+print("PYTHON PATH:", sys.path)
 
 import defusedxml.minidom
 
